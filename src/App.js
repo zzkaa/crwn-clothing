@@ -6,6 +6,7 @@ import "./App.css";
 
 import HomePage from "./pages/homepage/homepage.component.jsx";
 import ShopPage from "./pages/shop/shop.component.jsx";
+import CheckoutPage from "./pages/checkout/checkout.component";
 import Header from "./components/header/header.component.jsx";
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-out/sign-in-and-sign-up-component.jsx";
 import { createUserProfileDocument } from "./firebase/firebase.utils";
@@ -44,6 +45,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
+          <Route exact path="/checkout" component={CheckoutPage} />
           <Route
             path="/signin"
             render={() =>
