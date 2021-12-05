@@ -1,4 +1,5 @@
 import React from "react";
+import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import { connect } from "react-redux";
 
 import "./checkout.styles.scss";
@@ -24,7 +25,11 @@ const CheckoutPage = ({ cartItems, cartTotal }) => {
           <span>Remove</span>
         </div>
       </div>
-      {cartItems.map((cartItem) => cartItem.name)}
+      <div>
+        {cartItems.map((cartItem) => (
+          <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+        ))}
+      </div>
       <div className="total">TOTAL: ${cartTotal}</div>
     </div>
   );
